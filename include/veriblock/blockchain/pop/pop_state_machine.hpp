@@ -246,6 +246,9 @@ struct PopStateMachine {
   //! unapplies all commands in chain
   //! @overload
   void unapply(Chain<index_t>& chain) { unapply(*chain.tip(), *chain.first()); }
+  void unapply(ChainSlice<index_t>& chain) {
+    unapply(*chain.tip(), *chain.first());
+  }
 
   //! applies all commands from blocks in the range of (from; to].
   //! @invariant atomic: applies either all or none of the requested blocks

@@ -61,6 +61,7 @@ set_tests_properties(vbk_getblockproof_test PROPERTIES
 
 addtest(blockchain_test
         chain_test.cpp
+        chainslice_test.cpp
         blockchain_test.cpp
         )
 set_tests_properties(blockchain_test PROPERTIES
